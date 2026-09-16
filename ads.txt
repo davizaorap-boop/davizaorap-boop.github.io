@@ -1,0 +1,14 @@
+# ads.txt
+#
+# Este arquivo é o padrão usado por redes de publicidade (Google AdSense,
+# Google Ad Manager, Media.net etc.) para confirmar que você tem autorização
+# para vender espaço publicitário neste domínio. Ele precisa ficar na raiz
+# do site, ou seja, em: https://seudominio.com/ads.txt
+#
+# Quando você criar sua conta na rede de anúncios escolhida, ela vai te dar
+# uma linha parecida com esta para colocar aqui:
+#
+# google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
+#
+# Troque "pub-0000000000000000" pelo ID que a rede te enviar.
+# Sem essa linha, os anúncios da sua rede podem não ser aprovados/exibidos.

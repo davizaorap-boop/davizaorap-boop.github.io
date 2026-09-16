@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SuperFree</title>
+<meta name="description" content="SuperFree — vídeos e fotos em um só lugar." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Linhas neon decorativas no fundo -->
+  <div class="bg-decor" aria-hidden="true">
+    <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="lineBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#2E5EFF" />
+          <stop offset="100%" stop-color="#14D8A0" />
+        </linearGradient>
+        <linearGradient id="lineGreen" x1="100%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#14D8A0" />
+          <stop offset="100%" stop-color="#2E5EFF" />
+        </linearGradient>
+        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="6" result="blur" />
+          <feMerge>
+            <feMergeNode in="blur" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+      </defs>
+      <path class="curve curve-a" d="M -100 120 C 300 40, 600 260, 1000 140 S 1500 40, 1750 160"
+            fill="none" stroke="url(#lineBlue)" stroke-width="2.5" filter="url(#glow)" />
+      <path class="curve curve-b" d="M -100 780 C 350 900, 650 620, 1050 760 S 1500 900, 1750 740"
+            fill="none" stroke="url(#lineGreen)" stroke-width="2.5" filter="url(#glow)" />
+      <path class="curve curve-c" d="M -100 460 C 250 380, 500 560, 900 430 S 1400 300, 1750 440"
+            fill="none" stroke="url(#lineBlue)" stroke-width="1.5" filter="url(#glow)" opacity="0.6" />
+    </svg>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="logo" aria-label="SuperFree, página inicial">Super<span>Free</span></a>
+
+      <div class="toggle-wrap" id="toggleWrap">
+        <span class="toggle-pill" id="togglePill" aria-hidden="true"></span>
+        <button type="button" class="toggle-btn active" data-target="videos" role="tab" aria-selected="true">Vídeos</button>
+        <button type="button" class="toggle-btn" data-target="fotos" role="tab" aria-selected="false">Fotos</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="ad-slot ad-top">
+      <span class="ad-label">Espaço publicitário</span>
+      <div class="ad-placeholder">728 × 90</div>
+    </div>
+  </div>
+
+  <main class="container content-area">
+    <section id="videos" class="content-panel is-active" aria-label="Vídeos">
+      <div class="empty-state">
+        <svg class="empty-icon" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="48" cy="48" r="40" stroke="url(#lineBlue)" stroke-width="2.5" />
+          <path d="M40 34 L64 48 L40 62 Z" stroke="url(#lineGreen)" stroke-width="2.5" stroke-linejoin="round" />
+        </svg>
+        <h2>Nenhum vídeo por aqui ainda</h2>
+        <p>Os primeiros vídeos aparecem assim que forem publicados.</p>
+      </div>
+    </section>
+
+    <section id="fotos" class="content-panel" aria-label="Fotos">
+      <div class="empty-state">
+        <svg class="empty-icon" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="14" y="24" width="68" height="52" rx="8" stroke="url(#lineBlue)" stroke-width="2.5" />
+          <circle cx="34" cy="42" r="6" stroke="url(#lineGreen)" stroke-width="2.5" />
+          <path d="M14 66 L36 48 L54 62 L66 50 L82 66" stroke="url(#lineGreen)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <h2>Nenhuma foto por aqui ainda</h2>
+        <p>As primeiras fotos aparecem assim que forem publicadas.</p>
+      </div>
+    </section>
+  </main>
+
+  <div class="container">
+    <div class="ad-slot ad-bottom">
+      <span class="ad-label">Espaço publicitário</span>
+      <div class="ad-placeholder">728 × 90</div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span class="logo small">Super<span>Free</span></span>
+      <p>&copy; 2026 SuperFree</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
