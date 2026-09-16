@@ -64,28 +64,44 @@
 
   <main class="container content-area">
     <section id="videos" class="content-panel is-active" aria-label="Vídeos">
-      <div class="empty-state">
-        <svg class="empty-icon" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="48" cy="48" r="40" stroke="url(#lineBlue)" stroke-width="2.5" />
-          <path d="M40 34 L64 48 L40 62 Z" stroke="url(#lineGreen)" stroke-width="2.5" stroke-linejoin="round" />
-        </svg>
-        <h2>Nenhum vídeo por aqui ainda</h2>
-        <p>Os primeiros vídeos aparecem assim que forem publicados.</p>
-      </div>
+      <div class="panel-target" data-type="video"></div>
     </section>
 
     <section id="fotos" class="content-panel" aria-label="Fotos">
-      <div class="empty-state">
-        <svg class="empty-icon" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="14" y="24" width="68" height="52" rx="8" stroke="url(#lineBlue)" stroke-width="2.5" />
-          <circle cx="34" cy="42" r="6" stroke="url(#lineGreen)" stroke-width="2.5" />
-          <path d="M14 66 L36 48 L54 62 L66 50 L82 66" stroke="url(#lineGreen)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
-        <h2>Nenhuma foto por aqui ainda</h2>
-        <p>As primeiras fotos aparecem assim que forem publicadas.</p>
-      </div>
+      <div class="panel-target" data-type="foto"></div>
     </section>
   </main>
+
+  <!-- Modelos usados pelo script.js quando ainda não há conteúdo publicado -->
+  <template id="empty-videos">
+    <div class="empty-state">
+      <svg class="empty-icon" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="48" cy="48" r="40" stroke="url(#lineBlue)" stroke-width="2.5" />
+        <path d="M40 34 L64 48 L40 62 Z" stroke="url(#lineGreen)" stroke-width="2.5" stroke-linejoin="round" />
+      </svg>
+      <h2>Nenhum vídeo por aqui ainda</h2>
+      <p>Os primeiros vídeos aparecem assim que forem publicados.</p>
+    </div>
+  </template>
+
+  <template id="empty-fotos">
+    <div class="empty-state">
+      <svg class="empty-icon" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="14" y="24" width="68" height="52" rx="8" stroke="url(#lineBlue)" stroke-width="2.5" />
+        <circle cx="34" cy="42" r="6" stroke="url(#lineGreen)" stroke-width="2.5" />
+        <path d="M14 66 L36 48 L54 62 L66 50 L82 66" stroke="url(#lineGreen)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+      <h2>Nenhuma foto por aqui ainda</h2>
+      <p>As primeiras fotos aparecem assim que forem publicadas.</p>
+    </div>
+  </template>
+
+  <template id="video-card">
+    <article class="media-card">
+      <div class="media-thumb"></div>
+      <p class="media-title"></p>
+    </article>
+  </template>
 
   <div class="container">
     <div class="ad-slot ad-bottom">
@@ -101,6 +117,7 @@
     </div>
   </footer>
 
+  <script src="conteudo.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
