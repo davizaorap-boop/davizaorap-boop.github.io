@@ -45,7 +45,7 @@
   // (você) continua sendo o único que consegue ADICIONAR arquivos, porque
   // só quem tem acesso de escrita ao repositório consegue subir algo nele.
 
-  var PASTA_MIDIA = 'midia';
+  var PASTA_MIDIA = ''; // '' = raiz do repositório. Troque para 'midia', por exemplo, se um dia preferir organizar os arquivos numa pasta.
   var EXTENSOES_VIDEO = ['mp4', 'webm', 'ogg', 'ogv', 'mov', 'm4v'];
   var EXTENSOES_FOTO = ['jpg', 'jpeg', 'png', 'gif', 'webp', 'avif', 'svg'];
 
@@ -79,7 +79,7 @@
 
   function buscarArquivosDaPasta() {
     var repo = detectarRepositorio();
-    var url = 'https://api.github.com/repos/' + repo.owner + '/' + repo.repo + '/contents/' + PASTA_MIDIA;
+    var url = 'https://api.github.com/repos/' + repo.owner + '/' + repo.repo + '/contents' + (PASTA_MIDIA ? '/' + PASTA_MIDIA : '');
 
     return fetch(url, { headers: { Accept: 'application/vnd.github+json' } })
       .then(function (resp) {
